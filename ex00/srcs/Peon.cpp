@@ -27,6 +27,7 @@ Peon::Peon(Peon const & src) : Victim(src)
 
 Peon::~Peon()
 {
+	std::cout << "Bleuark..." << std::endl;
 }
 
 void Peon::getPolymorphed(void) const
