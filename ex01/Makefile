@@ -1,11 +1,13 @@
-NAME			:=
+NAME			:=	ex01
 
-SRCS			:=	main.cpp \
-				
-			
-		
-	
-
+SRCS			:=	AWeapon.cpp		\
+					Character.cpp	\
+					Enemy.cpp		\
+					PlasmaRifle.cpp	\
+					PowerFist.cpp	\
+					RadScorpion.cpp	\
+					SuperMutant.cpp	\
+					main.cpp
 
 SRCS_DIR		:=	./srcs/
 HEADERS_DIR		:=	./headers/
