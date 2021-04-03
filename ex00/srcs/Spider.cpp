@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 16:40:00 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/02 16:49:18 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/03 09:35:43 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Spider::Spider(std::string name) : Victim(name)
 
 Spider::Spider(Spider const & src) : Victim(src)
 {
-	std::cout << "Screetch. " << std::endl;
+	std::cout << "Sc(reet)ch. " << std::endl;
 }
 
 Spider::~Spider()

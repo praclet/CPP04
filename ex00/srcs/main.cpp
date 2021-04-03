@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 12:35:30 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/02 16:53:42 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/03 09:45:54 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,13 @@ int main()
 		robert.polymorph(jim);
 		robert.polymorph(joe);
 	}
+	std::cout << "----------" << std::endl;
 	{
-		Sorcerer robert("Rincewind", "the noob");
+		Sorcerer rincer("Rincewind", "the noob");
 		Spider spider("Tarentulla");
 
-		std::cout << robert << spider;
-		robert.polymorph(spider);
+		std::cout << rincer << spider;
+		rincer.polymorph(spider);
 	}
 	return 0;
 }
