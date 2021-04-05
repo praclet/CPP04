@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 09:35:48 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 13:13:35 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/05 13:20:17 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int Squad::push(ISpaceMarine* unit)
 {
 	if (unit)
 	{
-		int i = 0;
+		int i;
 
 		for (i = 0; i < _nbUnits;i++)
 		{
