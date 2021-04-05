@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 14:20:22 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 15:44:23 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/05 16:23:14 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <string>
 # include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria
 {

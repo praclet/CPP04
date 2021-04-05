@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 14:56:11 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 15:38:24 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/05 15:45:38 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ unsigned int AMateria::getXP(void) const
 
 void AMateria::use(ICharacter& target)
 {
+	(void)target;
 	_xp += 10;
 }

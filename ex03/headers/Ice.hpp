@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:32:36 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 15:34:44 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/05 15:50:19 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Ice : public AMateria
 		virtual ~Ice();
 		Ice & operator=(Ice const & src);
 		virtual Ice* clone(void) const;
+		virtual void use(ICharacter& target);
 };
 
 #endif
