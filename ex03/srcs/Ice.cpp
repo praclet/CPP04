@@ -6,10 +6,11 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:32:35 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 15:44:09 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/05 17:35:05 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "Ice.hpp"
 
 Ice::Ice() : AMateria("ice")
@@ -26,7 +27,7 @@ Ice::~Ice()
 
 Ice & Ice::operator=(Ice const & src)
 {
-	return (this->AMateria::operator=(src));
+	return ((Ice &)this->AMateria::operator=(src));
 }
 
 Ice* Ice::clone(void) const

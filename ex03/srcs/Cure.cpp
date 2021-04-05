@@ -6,10 +6,11 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:13:30 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 15:43:15 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/05 17:34:31 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "Cure.hpp"
 
 Cure::Cure() : AMateria("cure")
@@ -26,7 +27,7 @@ Cure::~Cure()
 
 Cure & Cure::operator=(Cure const & src)
 {
-	return (this->AMateria::operator=(src));
+	return ((Cure &)this->AMateria::operator=(src));
 }
 
 Cure* Cure::clone(void) const

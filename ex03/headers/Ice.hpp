@@ -6,12 +6,12 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:32:36 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 15:50:19 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/05 17:41:57 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-# define CURE_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
 # include <string>
 # include "ICharacter.hpp"
