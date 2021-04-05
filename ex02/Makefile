@@ -1,11 +1,9 @@
-NAME			:=
+NAME			:=	ex02
 
-SRCS			:=	main.cpp \
-				
-			
-		
-	
-
+SRCS			:=	AssaultTerminator.cpp \
+					Squad.cpp \
+					TacticalMarine.cpp \
+					main.cpp
 
 SRCS_DIR		:=	./srcs/
 HEADERS_DIR		:=	./headers/
