@@ -1,11 +1,11 @@
-NAME			:=
+NAME			:=	ex03
 
-SRCS			:=	main.cpp \
-				
-			
-		
-	
-
+SRCS			:=	AMateria.cpp	\
+					Character.cpp	\
+					Cure.cpp		\
+					Ice.cpp			\
+					MateriaSource.cpp	\
+					main.cpp
 
 SRCS_DIR		:=	./srcs/
 HEADERS_DIR		:=	./headers/
