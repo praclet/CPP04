@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DeepCoreMiner.hpp                                  :+:      :+:    :+:   */
+/*   Asteroid.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 11:12:58 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/07 12:31:52 by praclet          ###   ########lyon.fr   */
+/*   Created: 2021/04/07 11:54:23 by praclet           #+#    #+#             */
+/*   Updated: 2021/04/07 12:35:29 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEEPCOREMINER_HPP
-# define DEEPCOREMINER_HPP
+#ifndef ASTEROID_HPP
+# define ASTEROID_HPP
 
-# include "IAsteroid.hpp"
-# include "IMiningLaser.hpp"
+# include <string>
+# include "StripMiner.hpp"
+# include "DeepCoreMiner.hpp"
 
-class IAsteroid;
-
-class DeepCoreMiner : public IMiningLaser
+class Asteroid
 {
 	public:
-		DeepCoreMiner();
-		DeepCoreMiner(DeepCoreMiner const & src);
-		virtual ~DeepCoreMiner();
-		DeepCoreMiner & operator= (DeepCoreMiner const & src);
-		virtual void mine(IAsteroid* target);
+		Asteroid();
+		Asteroid(Asteroid const &);
+		virtual ~Asteroid();
+		virtual Asteroid const operator=(Asteroid const & src);
+		virtual std::string beMined(StripMiner * miner) const;
+		virtual std::string beMined(DeepCoreMiner * miner) const;
+		virtual std::string getName() const;
 };
 
 #endif

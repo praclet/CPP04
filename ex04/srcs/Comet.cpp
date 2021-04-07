@@ -1,39 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   StripMiner.cpp                                     :+:      :+:    :+:   */
+/*   Comet.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 11:12:57 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/07 12:39:41 by praclet          ###   ########lyon.fr   */
+/*   Created: 2021/04/07 12:11:36 by praclet           #+#    #+#             */
+/*   Updated: 2021/04/07 12:37:43 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include <string>
+#include "Comet.hpp"
 #include "StripMiner.hpp"
+#include "DeepCoreMiner.hpp"
 
-StripMiner::StripMiner()
+Comet::Comet()
 {
 }
 
-StripMiner::StripMiner(StripMiner const & src)
-{
-	(void)src;
-}
-
-StripMiner::~StripMiner()
+Comet::Comet(Comet const &)
 {
 }
 
-StripMiner & StripMiner::operator= (StripMiner const & src)
+Comet::~Comet()
 {
-	(void)src;
+}
+
+Comet const Comet::operator=(Comet const &)
+{
 	return (*this);
 }
 
-void StripMiner::mine(IAsteroid* target)
+std::string Comet::beMined(StripMiner * miner) const
 {
-	std::cout << "* strip mining... got " << target->beMined(this) << "! *"
-		<< std::endl;
+	(void)miner;
+	return (std::string("Tartarite"));
 }
+
+std::string Comet::beMined(DeepCoreMiner * miner) const
+{
+	(void)miner;
+	return (std::string("Meium"));
+}
+
+std::string Comet::getName() const
+{
+	return (std::string("Comet"));
+}
+

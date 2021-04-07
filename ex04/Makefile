@@ -1,6 +1,11 @@
 NAME			:=	ex04
 
-SRCS			:=	
+SRCS			:=	Asteroid.cpp \
+					Comet.cpp \
+					DeepCoreMiner.cpp \
+					MiningBarge.cpp \
+					StripMiner.cpp \
+					main.cpp
 
 SRCS_DIR		:=	./srcs/
 HEADERS_DIR		:=	./headers/

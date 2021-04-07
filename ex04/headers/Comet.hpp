@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   StripMiner.cpp                                     :+:      :+:    :+:   */
+/*   Comet.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 11:12:57 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/07 12:39:41 by praclet          ###   ########lyon.fr   */
+/*   Created: 2021/04/07 12:09:22 by praclet           #+#    #+#             */
+/*   Updated: 2021/04/07 12:37:53 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "StripMiner.hpp"
+#ifndef COMET_HPP
+# define COMET_HPP
 
-StripMiner::StripMiner()
-{
-}
+# include <string>
+# include "StripMiner.hpp"
+# include "DeepCoreMiner.hpp"
 
-StripMiner::StripMiner(StripMiner const & src)
+class Comet
 {
-	(void)src;
-}
+	public:
+		Comet();
+		Comet(Comet const &);
+		virtual ~Comet();
+		virtual Comet const operator=(Comet const &);
+		virtual std::string beMined(StripMiner *miner) const;
+		virtual std::string beMined(DeepCoreMiner *miner) const;
+		virtual std::string getName() const;
+};
 
-StripMiner::~StripMiner()
-{
-}
-
-StripMiner & StripMiner::operator= (StripMiner const & src)
-{
-	(void)src;
-	return (*this);
-}
-
-void StripMiner::mine(IAsteroid* target)
-{
-	std::cout << "* strip mining... got " << target->beMined(this) << "! *"
-		<< std::endl;
-}
+#endif
