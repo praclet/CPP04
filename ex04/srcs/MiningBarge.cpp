@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:41:22 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/07 13:05:44 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/07 14:20:33 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ MiningBarge & MiningBarge::operator=(MiningBarge const & src)
 
 void MiningBarge::equip(IMiningLaser* miner)
 {
+	if (!miner)
+		return ;
 	for (std::size_t i = 0;i < _nbLasers;i++)
 		if (!_tabLasers[i])
 		{
@@ -47,7 +49,9 @@ void MiningBarge::equip(IMiningLaser* miner)
 
 void MiningBarge::mine(IAsteroid* asteroid) const
 {
+	if (!asteroid)
+		return ;
 	for (std::size_t i = 0;i < _nbLasers;i++)
-		if (!_tabLasers[i])
+		if (_tabLasers[i])
 			_tabLasers[i]->mine(asteroid);
 }

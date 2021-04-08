@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:09:22 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/07 12:37:53 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/07 13:54:07 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 # define COMET_HPP
 
 # include <string>
+# include "IAsteroid.hpp"
 # include "StripMiner.hpp"
 # include "DeepCoreMiner.hpp"
 
-class Comet
+class Comet : public IAsteroid
 {
 	public:
 		Comet();

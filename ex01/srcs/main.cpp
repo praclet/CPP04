@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 09:58:54 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/03 17:28:24 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/08 15:20:25 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "Character.hpp"
 #include "Enemy.hpp"
 #include "RadScorpion.hpp"
+#include "SuperMutant.hpp"
 #include "AWeapon.hpp"
 #include "PlasmaRifle.hpp"
 #include "PowerFist.hpp"
@@ -42,5 +43,15 @@ int main()
 		delete	pf;
 	}
 	std::cout << "-----------" << std::endl;
+	{
+		Character toto("Toto");
+		std::cout << toto;
+		SuperMutant mechant;
+		PlasmaRifle boum;
+		toto.equip(&boum);
+		std::cout << toto;
+		toto.attack(&mechant);
+		std::cout << toto;
+	}
 	return 0;
 }

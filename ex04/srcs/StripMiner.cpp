@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:12:57 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/07 12:39:41 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/07 14:23:31 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ StripMiner & StripMiner::operator= (StripMiner const & src)
 
 void StripMiner::mine(IAsteroid* target)
 {
+	if (!target)
+		return ;
 	std::cout << "* strip mining... got " << target->beMined(this) << "! *"
 		<< std::endl;
 }
