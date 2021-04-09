@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 11:59:58 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/02 15:16:17 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/09 08:56:18 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Victim
 		std::string	_name;
 		Victim();
 	public:
-		Victim(std::string name);
+		Victim(std::string const & name);
 		Victim(Victim const & src);
 		~Victim();
 		Victim & operator = (Victim const & src);

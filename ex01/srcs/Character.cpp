@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 11:32:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/03 17:34:49 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/09 09:23:16 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,18 @@ void Character::equip(AWeapon* weapon)
 
 void Character::attack(Enemy* enemy)
 {
-	if (!_weapon)
+	if (!_weapon || !enemy)
 		return ;
 
 	int amount = _weapon->getAPCost();
 	if (amount > 0)
 	{
+		if ((unsigned int)amount > _ap)
+		{
+			std::cout << _name << " can't attack with a "
+				<< _weapon->getName() << std::endl;
+			return ;
+		}
 		if ((unsigned int)amount < _ap)
 			_ap -= (unsigned int)amount;
 		else

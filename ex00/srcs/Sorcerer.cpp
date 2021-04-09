@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 09:12:52 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/02 14:59:58 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/09 08:55:51 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "Victim.hpp"
 
 
-Sorcerer::Sorcerer(std::string name, std::string title)
+Sorcerer::Sorcerer(std::string const & name, std::string const & title)
 	: _name(name), _title(title)
 {
 	std::cout << _name << ", " << _title << ", is born!" << std::endl;

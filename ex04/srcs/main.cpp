@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:41:29 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/07 14:26:57 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/09 09:26:28 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,12 @@ int main(void)
 	DCMiner[1].mine(NULL);
 	std::cout << "-------" << std::endl;
 	barge[0].equip(&SMiner[0]);
-	std::cout << "-" << std::endl;
 	barge[0].mine(NULL);
-	std::cout << "-" << std::endl;
-	barge[0].mine(&comet[3]);
+	barge[0].mine(&comet[2]);
 	std::cout << "-------" << std::endl;
 	barge[1].equip(&DCMiner[0]);
 	barge[1].equip(&DCMiner[0]);
-	barge[1].mine(&asteroid[3]);
+	barge[1].mine(&asteroid[2]);
 	std::cout << "-------" << std::endl;
 	barge[2].equip(NULL);
 	barge[2].equip(&SMiner[0]);
@@ -49,7 +47,7 @@ int main(void)
 	barge[2].equip(&SMiner[1]);
 	barge[2].equip(&DCMiner[1]);
 	barge[2].equip(&SMiner[2]);
-	barge[2].mine(&comet[3]);
-	barge[2].mine(&asteroid[3]);
+	barge[2].mine(&comet[2]);
+	barge[2].mine(&asteroid[2]);
 	return (0);
 }

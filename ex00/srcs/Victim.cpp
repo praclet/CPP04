@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 11:54:26 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/02 13:33:37 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/09 08:56:32 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "Victim.hpp"
 
 
-Victim::Victim(std::string name) : _name(name)
+Victim::Victim(std::string const & name) : _name(name)
 {
 	std::cout << "Some random victim called "
 		<< _name << " just appeared!"
