@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:36:44 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/09 11:36:10 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 16:44:14 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,57 @@ int main()
 		blabla(*cure1);
 		titi.use(0, titi);
 		blabla(*cure1);
+	}
+	std::cout << "---------" << std::endl;
+	{
+		Character obj("Toto");
+		Character obj1(obj);
+		Character obj2;
+
+		obj2=obj;
+		std::cout << obj.getName() << " "
+			<< obj1.getName() << " "
+			<< obj2.getName() << " " << std::endl;
+	}
+	std::cout << "---------" << std::endl;
+	{
+		Character bob("Bob");
+		Cure obj;
+		obj.use(bob);
+		Cure obj1(obj);
+		Cure obj2;
+
+		obj2=obj;
+		std::cout << obj.getType() << " "
+			<< obj1.getType() << " "
+			<< obj2.getType() << " " << std::endl;
+		std::cout << obj.getXP() << " "
+			<< obj1.getXP() << " "
+			<< obj2.getXP() << " " << std::endl;
+	}
+	std::cout << "---------" << std::endl;
+	{
+		Character bob("Bob");
+		Ice obj;
+		obj.use(bob);
+		Ice obj1(obj);
+		Ice obj2;
+
+		obj2=obj;
+		std::cout << obj.getType() << " "
+			<< obj1.getType() << " "
+			<< obj2.getType() << " " << std::endl;
+		std::cout << obj.getXP() << " "
+			<< obj1.getXP() << " "
+			<< obj2.getXP() << " " << std::endl;
+	}
+	std::cout << "---------" << std::endl;
+	{
+		MateriaSource obj;
+		MateriaSource obj1(obj);
+		MateriaSource obj2;
+
+		obj2=obj;
 	}
 	return 0;
 }

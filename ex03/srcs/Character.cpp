@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:54:30 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 17:32:57 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 15:57:56 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ Character & Character::operator= (Character const & src)
 		else
 			_tabMaterias[i] = NULL;
 	}
+	_name = src._name;
 	return (*this);
 }
 
