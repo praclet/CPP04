@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:41:22 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/07 14:20:33 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 08:32:35 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ void MiningBarge::equip(IMiningLaser* miner)
 		{
 			_tabLasers[i] = miner;
 			break;
+		}
+		else
+		{
+			if (_tabLasers[i] == miner)
+				return ;
 		}
 }
 
