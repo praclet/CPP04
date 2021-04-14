@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 09:10:15 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/09 08:55:57 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 12:43:09 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Sorcerer
 	public:
 		Sorcerer(std::string const & name, std::string const & title);
 		Sorcerer(Sorcerer const & src);
-		~Sorcerer();
+		virtual ~Sorcerer();
 		Sorcerer & operator = (Sorcerer const & src);
 		void polymorph(Victim const & victim) const;
 		std::string const & getName(void) const;

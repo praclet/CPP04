@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 16:39:59 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/02 16:53:14 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 12:43:22 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Spider : public Victim
 	public:
 		Spider(std::string name);
 		Spider(Spider const & src);
-		~Spider();
+		virtual ~Spider();
 		void getPolymorphed(void) const;
 };
 

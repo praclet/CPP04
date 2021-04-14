@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 16:20:01 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/03 16:45:48 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 12:44:12 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class RadScorpion : public Enemy
 	public:
 		RadScorpion();
 		RadScorpion(RadScorpion const & src);
-		~RadScorpion();
+		virtual ~RadScorpion();
 		RadScorpion & operator = (RadScorpion const & src);
 };
 

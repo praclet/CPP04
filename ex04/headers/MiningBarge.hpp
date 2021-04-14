@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:40:53 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 14:31:18 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 12:45:28 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class MiningBarge
 	public:
 		MiningBarge();
 		MiningBarge(MiningBarge const & src);
-		~MiningBarge();
+		virtual ~MiningBarge();
 		MiningBarge & operator=(MiningBarge const & src);
 		void equip(IMiningLaser* miner);
 		void mine(IAsteroid* asteroid) const;
