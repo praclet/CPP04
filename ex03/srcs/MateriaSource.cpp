@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:52:48 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/16 16:59:21 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/18 12:41:29 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void MateriaSource::learnMateria(AMateria* element)
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
 	for (std::size_t i=0;i < _nbMaxMaterias;i++)
-		if (_tabMaterias[i]->getType() == type)
+		if (_tabMaterias[i] && _tabMaterias[i]->getType() == type)
 			return (_tabMaterias[i]->clone());
 	return (NULL);
 }
