@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 09:12:52 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/09 08:55:51 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 16:57:09 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ Sorcerer::~Sorcerer()
 
 Sorcerer & Sorcerer::operator = (Sorcerer const & src)
 {
+	if (this == &src)
+		return *this;
 	_name = src._name;
 	_title = src._title;
 	std::cout << _name << ", " << _title << ", is doubled!" << std::endl;

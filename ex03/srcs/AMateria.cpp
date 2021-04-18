@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 14:56:11 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 15:45:38 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 16:58:54 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ AMateria::~AMateria()
 
 AMateria & AMateria::operator=(AMateria const & src)
 {
+	if (this == &src)
+		return *this;
 	_xp = src._xp;
 	return (*this);
 }

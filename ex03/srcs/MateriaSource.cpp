@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:52:48 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/07 10:24:04 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 16:59:21 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,15 @@ MateriaSource::MateriaSource(MateriaSource const & src)
 
 MateriaSource::~MateriaSource()
 {
+	for (std::size_t i=0;i < _nbMaxMaterias;i++)
+		if (_tabMaterias[i])
+			delete _tabMaterias[i];
 }
 
 MateriaSource & MateriaSource::operator=(MateriaSource const & src)
 {
+	if (this == &src)
+		return *this;
 	for (std::size_t i=0;i < _nbMaxMaterias;i++)
 		_tabMaterias[i] = src._tabMaterias[i];
 	return (*this);

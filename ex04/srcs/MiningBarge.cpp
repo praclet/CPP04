@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:41:22 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/13 08:32:35 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 17:04:49 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ MiningBarge::~MiningBarge()
 
 MiningBarge & MiningBarge::operator=(MiningBarge const & src)
 {
+	if (this == &src)
+		return (*this);
 	for (std::size_t i = 0;i < _nbLasers;i++)
 		_tabLasers[i] = src._tabLasers[i];
 	return (*this);

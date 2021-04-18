@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:54:30 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/12 15:57:56 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/18 09:10:43 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ Character::~Character()
 
 Character & Character::operator= (Character const & src)
 {
+	if (this == &src)
+		return *this;
 	_freeTab();
 	for (std::size_t i=0;i < _nbMaxMaterias;i++)
 	{

@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 16:19:48 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/03 16:39:06 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 16:58:29 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ RadScorpion::~RadScorpion()
 
 RadScorpion & RadScorpion::operator = (RadScorpion const & src)
 {
+	if (this == &src)
+		return *this;
 	this->Enemy::operator=(src);
 	return (*this);
 }

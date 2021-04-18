@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 10:48:23 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 11:52:28 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 17:03:11 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ TacticalMarine::~TacticalMarine()
 
 TacticalMarine & TacticalMarine::operator = (TacticalMarine const & src)
 {
+	if (this == &src)
+		return (*this);
 	_data = src._data;
 	return (*this);
 }

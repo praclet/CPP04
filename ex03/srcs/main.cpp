@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:36:44 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/12 16:44:14 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/18 09:14:23 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main()
 		delete me;
 		delete src;
 	}
-	std::cout << "---------" << std::endl;
+	std::cout << "---------" << __LINE__ << std::endl;
 	{
 		Character toto("Toto");
 		Character titi("Titi");
@@ -72,12 +72,15 @@ int main()
 		titi.equip(cure3);
 		titi.equip(cure4);
 		titi.equip(cure5);
-
+		delete ice5;
+		delete cure5;
+		
 		toto.unequip(3);
+		delete ice4;
 		titi.unequip(2);
+		delete cure3;
 		titi.unequip(2);
 		toto.unequip(13);
-
 		toto.use(3, titi);
 		titi.use(2, toto);
 
@@ -92,8 +95,9 @@ int main()
 		blabla(*cure1);
 		titi.use(0, titi);
 		blabla(*cure1);
+		
 	}
-	std::cout << "---------" << std::endl;
+	std::cout << "--------- " << __LINE__ << std::endl;
 	{
 		Character obj("Toto");
 		Character obj1(obj);
@@ -104,7 +108,7 @@ int main()
 			<< obj1.getName() << " "
 			<< obj2.getName() << " " << std::endl;
 	}
-	std::cout << "---------" << std::endl;
+	std::cout << "--------- " << __LINE__ << std::endl;
 	{
 		Character bob("Bob");
 		Cure obj;
@@ -120,7 +124,7 @@ int main()
 			<< obj1.getXP() << " "
 			<< obj2.getXP() << " " << std::endl;
 	}
-	std::cout << "---------" << std::endl;
+	std::cout << "--------- " << __LINE__ << std::endl;
 	{
 		Character bob("Bob");
 		Ice obj;
@@ -136,7 +140,7 @@ int main()
 			<< obj1.getXP() << " "
 			<< obj2.getXP() << " " << std::endl;
 	}
-	std::cout << "---------" << std::endl;
+	std::cout << "--------- " << __LINE__ << std::endl;
 	{
 		MateriaSource obj;
 		MateriaSource obj1(obj);

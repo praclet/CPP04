@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:11:36 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/07 12:37:43 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 17:04:46 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ Comet::~Comet()
 {
 }
 
-Comet const Comet::operator=(Comet const &)
+Comet const Comet::operator=(Comet const & src)
 {
+	(void)src;
 	return (*this);
 }
 

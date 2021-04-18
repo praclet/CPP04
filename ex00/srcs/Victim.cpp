@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 11:54:26 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/09 08:56:32 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 16:57:31 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ Victim::~Victim()
 
 Victim & Victim::operator = (Victim const & src)
 {
+	if (this == &src)
+		return *this;
 	_name = src._name;
 	std::cout << _name << ", is doubled!" << std::endl;
 	return (*this);

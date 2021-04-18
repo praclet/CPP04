@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 11:32:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/09 09:23:16 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 16:57:47 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ Character::~Character()
 
 Character & Character::operator = (Character const & src)
 {
+	if (this == &src)
+		return *this;
 	_name = src._name;
 	_ap = src._ap;
 	_weapon = src._weapon;

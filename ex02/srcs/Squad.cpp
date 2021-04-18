@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 09:35:48 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 13:20:17 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 17:02:57 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ Squad::~Squad()
 
 Squad & Squad::operator= (Squad const & src)
 {
+	if (this == &src)
+		return (*this);
 	_freeTab();
 	_nbUnits = src._nbUnits;
 	if (_nbUnits > 0)

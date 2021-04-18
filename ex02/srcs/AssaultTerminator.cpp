@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 11:47:25 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/05 11:52:20 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 17:02:20 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ AssaultTerminator::~AssaultTerminator()
 
 AssaultTerminator & AssaultTerminator::operator = (AssaultTerminator const & src)
 {
+	if (this == &src)
+		return (*this);
 	_data = src._data;
 	return (*this);
 }

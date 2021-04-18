@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 16:41:39 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/03 16:50:31 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 16:58:42 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ SuperMutant::~SuperMutant()
 
 SuperMutant & SuperMutant::operator = (SuperMutant const & src)
 {
+	if (this == &src)
+		return *this;
 	this->Enemy::operator=(src);
 	return (*this);
 }

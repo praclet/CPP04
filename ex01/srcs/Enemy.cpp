@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 15:28:48 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/03 17:24:33 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 16:57:59 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ Enemy::~Enemy()
 
 Enemy & Enemy::operator = (Enemy const & src)
 {
+	if (this == &src)
+		return *this;
 	_hp = src._hp;
 	_type = src._type;
 	return (*this);
