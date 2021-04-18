@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:36:44 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/18 09:14:23 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/18 13:48:07 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,9 @@ int main()
 		titi.equip(cure3);
 		titi.equip(cure4);
 		titi.equip(cure5);
-		delete ice5;
-		delete cure5;
 		
 		toto.unequip(3);
-		delete ice4;
 		titi.unequip(2);
-		delete cure3;
 		titi.unequip(2);
 		toto.unequip(13);
 		toto.use(3, titi);
@@ -96,6 +92,10 @@ int main()
 		titi.use(0, titi);
 		blabla(*cure1);
 		
+		delete ice4;
+		delete ice5;
+		delete cure3;
+		delete cure5;
 	}
 	std::cout << "--------- " << __LINE__ << std::endl;
 	{
@@ -143,10 +143,26 @@ int main()
 	std::cout << "--------- " << __LINE__ << std::endl;
 	{
 		MateriaSource obj;
+		AMateria *ice1=new Ice();
+		AMateria *ice2=new Ice();
+		AMateria *ice3=new Ice();
+		AMateria *cure1=new Cure();
+		AMateria *cure2=new Cure();
+		AMateria *cure3=new Cure();
+
+		obj.learnMateria(ice1);
+		obj.learnMateria(cure1);
+		obj.learnMateria(ice2);
+		obj.learnMateria(cure2);
+		obj.learnMateria(ice3);
+		obj.learnMateria(cure3);
+
 		MateriaSource obj1(obj);
 		MateriaSource obj2;
-
 		obj2=obj;
+
+		delete ice3;
+		delete cure3;
 	}
 	return 0;
 }
