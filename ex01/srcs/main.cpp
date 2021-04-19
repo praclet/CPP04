@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 09:58:54 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/12 15:30:45 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 08:39:50 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #include "AWeapon.hpp"
 #include "PlasmaRifle.hpp"
 #include "PowerFist.hpp"
+#include "BadGuy.hpp"
+#include "BigBoom.hpp"
 
 int main()
 {
@@ -48,6 +50,21 @@ int main()
 		std::cout << toto;
 		SuperMutant mechant;
 		PlasmaRifle boum;
+		toto.equip(&boum);
+		std::cout << toto;
+		toto.attack(&mechant);
+		std::cout << toto;
+		toto.attack(&mechant);
+		std::cout << toto;
+		toto.recoverAP();
+		std::cout << toto;
+	}
+	std::cout << "-----------" << std::endl;
+	{
+		Character toto("Toto");
+		std::cout << toto;
+		BadGuy mechant;
+		BigBoom boum;
 		toto.equip(&boum);
 		std::cout << toto;
 		toto.attack(&mechant);

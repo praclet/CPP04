@@ -7,6 +7,8 @@ SRCS			:=	AWeapon.cpp		\
 					PowerFist.cpp	\
 					RadScorpion.cpp	\
 					SuperMutant.cpp	\
+					BadGuy.cpp 		\
+					BigBoom.cpp 	\
 					main.cpp
 
 SRCS_DIR		:=	./srcs/
